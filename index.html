@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>CATS MANIA</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cats Mania</h1>
+        </div>
+    </header>
+
+    <div class="cover">
+        <form id="search-form">
+            <input id="cat-keyword" type="text" placeholder="Search a cat">
+            <button>Find a cat</button>
+        </form>
+    </div>
+
+    <div class="container cat-search">
+        <!-- Do some awesome stuff here -->
+    </div>
+
+    <script src="./public/js/jquery.min.js"></script>
+    <script>
+        // We intialize jQuery here
+        $(function(){
+            // Try to cache your selectors as posible
+            // Here's a sample :
+            var searchForm = $('#search-form');
+
+            //These are the variables we need to request from the API
+            var API_URL = 'https://api.thecatapi.com/v1/breeds/search?q=';
+            var API_KEY = 'bd38af4d-fba6-4d1f-bbfd-a98cc4e036d1';
+
+            //Trigger submit form
+            searchForm.on('submit', function(e){
+                
+                //Prevents the form to reload the page
+                e.preventDefault();
+                
+
+                // Make an API request IN THIS LINE
+                /* 
+                    Use this simple AJAX snippet to make a request
+                    
+                    $.ajax({
+                        method: 'GET',
+                        url: API_URL + Your query here (the value from the search form),
+                        headers:{
+                            'x-api-key' : API_KEY
+                        }
+                    })
+
+                    Here are the STEPS that MIGHT HELP you in presenting the results
+                    1.) Make an AJAX call from the API (use the snippet above)
+                    2.) Get the returned data using the .then() callback
+                    3.) Map/loop the data and create a template for the cards with data needed
+                    4.) Append the template to the container
+                    5.) Use .catch() callback if you want to handle some error(s)
+                    6.) Use another .then() callback for the default behaviour after making an API call
+
+                    or maybe this login MIGHT HELP you:
+                    1.) Submit the form
+                    2.) Make the loader visible
+                    3.) Make an API call
+                        This is what the API call should look like
+                            $.ajax({
+
+                            })
+                            .then(function(parameter){
+                                Check here if there is a returned data (the data returned is an array so, you can just use the length to check)
+
+                                Map the data (if any)
+                                    Hide the loader
+
+                                Display No results found from "the keyword you searched" (if there's no data)
+                                    Display cat.gif
+                            })
+                            .catch(function(){
+                                Handle error here IF NEEDED
+                            })
+                            .then(function(){
+                                Handle some default behaviours here after the search like the ff:
+                                * reset the value of the form to blank
+                                * other things that you want to add
+                            })
+                */
+               
+            })
+        })
+    </script>
+</body>
+</html>
