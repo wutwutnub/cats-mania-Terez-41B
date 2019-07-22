@@ -77,3 +77,58 @@ header{
     border: 0px;
 }
 
+
+
+
+.cat-search{
+    margin-top: 80px
+}
+
+.result{
+    margin-bottom: 15px;
+}
+
+.cats-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cats-container .loading{
+    width: 200px
+}
+
+.cats-details{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+}
+
+.cat-card{
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    color: rgba(0,0,0,0.7)
+}
+
+.cat-card h3{
+    color: rgba(0,0,0,0.8);
+    border-bottom: 1px solid  rgba(0,0,0,0.6);
+    margin-bottom: 10px;
+    padding-bottom: 10px
+}
+
+.cat-origin{
+    margin-top: 20px
+}
+
+.cat-description{
+    text-align: justify;
+    margin: 10px 0px;
+}
+
+.cat-wiki{
+    text-decoration: none;
+    color: #8E2DE2
+}
+
